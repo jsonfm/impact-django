@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --dark-gray: #1C1A1B;
+    --pink: #FFC4DD;
+    --blue: #2C13DD;
+}
+
+
+html, body {
+    background: black;
+    color: white;
+}
