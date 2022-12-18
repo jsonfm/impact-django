@@ -1,5 +1,5 @@
-from django.urls import path, include
-from apps.auth.views import LoginView
+from django.urls import path
+from apps.auth.views import LoginView, SignupView
 
 
 urlpatterns = [
@@ -7,5 +7,10 @@ urlpatterns = [
         route='login/',
         view=LoginView.as_view(),
         name="login"
-    )
+    ),
+    path(
+        route='signup/',
+        view=SignupView.as_view(),
+        name="signup"
+    ),
 ]

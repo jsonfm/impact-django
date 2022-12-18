@@ -4,8 +4,8 @@
 
 {% block content %}
 <section>
-    <div class="container flex items-center h-screen">
-        <div class="w-full bg-dark-gray rounded-2xl min-h-[24rem] max-w-[400px] px-4 md:px-6 py-12 md:py-16 mx-auto flex flex-col">
+    <div class="container flex items-center min-h-screen py-12">
+        <div class="w-full bg-dark-gray rounded-2xl min-h-[24rem] max-w-[400px] px-4 md:px-6 py-6 md:py-16 mx-auto flex flex-col">
             <a href="{% url 'feed' %}" class="text-3xl font-bold flex w-full justify-center mb-10"><b class="text-pink">#</b> Impact</a>
             <label class="w-full capitalize font-bold text-pink">username</label>
             <input
@@ -13,21 +13,30 @@
                 class="border-b outline-none bg-transparent w-full mb-6 py-2"
                 placeholder="fighter89"
             >
+            <label class="w-full capitalize font-bold text-pink">email</label>
+            <input
+                type="email"
+                class="border-b outline-none bg-transparent w-full mb-6 py-2"
+                placeholder="example@email.com"
+            >
             <label class="w-full capitalize font-bold text-pink">Password</label>
             <input
                 type="password"
                 class="border-b outline-none bg-transparent w-full mb-6 py-2"
                 placeholder="..."
             >
+            <label class="w-full capitalize font-bold text-pink">Password Confirmation</label>
+            <input
+                type="password"
+                class="border-b outline-none bg-transparent w-full mb-6 py-2"
+                placeholder="..."
+            >
             <button class="btn btn-blue rounded-xl mt-8 mx-auto">
-                Entry
+                Register
             </button>
 
-            <a class="text-center mt-12">
-                Forgot your password?
-            </a>
-            <a href="{% url 'signup' %}" class="underline text-pink font-bold mt-2 text-center">
-                Signup
+            <a href="{% url 'login' %}" class="text-center mt-4">
+                Already have an account?
             </a>
         </div>
     </div>
