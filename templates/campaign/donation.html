@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %} 
+<section class="bg-[#3A3E4E] h-[30vh]">
+    <div class="container">
+        <div class="px-6 py-8">
+            <h4 class="text-2xl font-bold text-pink">
+                Donate to
+            </h4>
+            <div class="flex mt-4 gap-5">
+                <div class="w-16 h-16 rounded-xl">
+                    <img
+                        src="https://images.unsplash.com/photo-1589262804704-c5aa9e6def89?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                        class="w-full h-full object-cover rounded-xl"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="flex flex-col">
+                    <p class="font-bold">Lorem ipsum dolor sit amet.</p>
+                    <div class="flex items-center gap-4 text-white/70">
+                        <p>Rock the vote</p>
+                        <i class="fa-solid fa-circle-check text-pink"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative rounded-t-2xl bg-dark z-[100] -mt-4 pb-20">
+    <div class="container py-12 px-6">
+        <p
+            class="text-justify"
+        >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, nobis. Voluptatem, minus! Iusto modi voluptas nam eum eaque velit obcaecati assumenda vel exercitationem fuga deserunt dicta, illo, illum commodi cum.
+        </p>
+        <p
+            class="text-pink font-bold mt-8 mb-4"
+        >
+            Select your donation amount
+        </p>
+        <div class="flex overflow-x-scroll overscroll-x-auto  w-full py-6 gap-4">
+            <div class="w-20 h-16 bg-dark-gray flex items-center justify-center rounded-xl">
+                $10
+            </div>
+            <div class="w-20 h-16 bg-dark-gray flex items-center justify-center rounded-xl">
+                $20
+            </div>
+            <div class="w-20 h-16 bg-dark-gray flex items-center justify-center rounded-xl">
+                $30
+            </div>
+            <div class="w-20 h-16 bg-dark-gray flex items-center justify-center rounded-xl">
+                $40
+            </div>
+            <div class="w-20 h-16 bg-dark-gray flex items-center justify-center rounded-xl">
+                $50
+            </div>
+        </div>
+        <p
+            class="text-white font-bold mt-4 mb-4"
+        >
+            Enter a custom amount
+        </p>
+
+        <input
+            type="text"
+            placeholder="0.00"
+            class="outline-none bg-transparent border-b w-full max-w-[330px] py-4 mx-auto"
+        >
+    </div>
+</section>
+
+<section class="fixed bottom-0 flex justify-center z-[100] w-full py-6">
+    <button class="btn btn-light rounded-xl text-blue">
+        Continue to Payment
+    </button>
+</section>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}
