@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block content %} 
+<section 
+    class="bg-dark-gray w-full h-[80vh] vertical-shadow-gradient overflow-hidden md:hidden" 
+>
+    <img
+        src="https://images.unsplash.com/photo-1591154189590-172f337157f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+        class="object-cover h-full w-full"
+    />
+</section>
+<section class="absolute bottom-32 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-3 items-center md:hidden">
+    <div class="w-32 h-32 rounded-xl bg-pink">
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxWUxuy5uhTyrdD_tkWOeZVP0T6qAUVPdMq5suq8MhTDnyzdJN_v64-cea_UcTF7d91KU&usqp=CAU"
+            class="h-full w-full object-cover rounded-xl"
+        >
+    </div>
+    <div class="py-4 flex items-center justify-center">
+        <p class="text-xl font-bold text-center">GreenPeace USA</p>
+    </div>
+</section>
+
+<section>
+    <div class="container py-6">
+        <div class="flex items-center justify-between">
+            <button class="btn btn-light rounded-full">Follow</button>
+            <div class="flex gap-4 items-center text-2xl">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                <i class="fa-regular fa-bookmark"></i>  
+            </div>
+        </div>
+        <div class="mt-8">
+            <h4 class="text-xl md:text-2xl font-bold  text-pink">
+                Lorem ipsum dolor sit amet consectetur.
+            </h4>
+            <div class="mt-2">
+                <span class="text-[#9C94C3]">Enviroment</span> in <span class="text-[#9C94C3]"> Kansas, USA </span>
+            </div>
+            <div class="mt-4">
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, saepe id? Aperiam mollitia atque, tempore fugiat sed quaerat soluta sunt numquam ad totam perferendis ratione eaque repellendus officia molestiae minus sapiente distinctio libero possimus laudantium consectetur? Totam eligendi vel libero voluptates ipsa ad necessitatibus? Consectetur fuga eius est in atque!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-12">
+    <div class="container">
+        <div class="flex justify-center gap-5">
+            <div class="flex flex-col items-center">
+                <h5 class="text-xl font-bold text-pink">
+                    300k
+                </h5>
+                <p class="text-white/80">
+                    followers
+                </p>
+            </div>
+            <div class="flex flex-col items-center">
+                <h5 class="text-xl font-bold text-pink">
+                    300k
+                </h5>
+                <p class="text-white/80">
+                    supported
+                </p>
+            </div>
+            <div class="flex flex-col items-center">
+                <h5 class="text-xl font-bold text-pink">
+                    300k
+                </h5>
+                <p class="text-white/80">
+                    raised
+                </p>
+            </div>
+        </div>
+    </div>
+    {% include "campaign/components/progresscard.html" %}
+</section>
+<section class="bg-[#3A3E4E] py-12">
+    <div class="container">
+        <h5 class="text-xl font-bold text-pink">What we need</h5>
+        <p class="text-justify mt-6">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum sequi repellat fuga reprehenderit corporis amet non sunt alias ipsam porro!
+        </p>
+    </div>
+</section>
+{% endblock %}

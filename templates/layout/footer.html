@@ -1,6 +1,33 @@
 
-{% block header %}
-<header>
-    Header
-</header>
-{% endblock %}
+<footer class="md:hidden fixed bottom-0 w-full z-[1000]">
+    <div class="flex w-full justify-around py-4 px-4 text-white/70">
+        {% with request.resolver_match.url_name as url_name %}
+        <a 
+            href="{% url 'feed' %}" 
+            class="flex flex-col {% if url_name == 'feed' %} text-pink {% endif %}"
+        >
+            <i class="fa-solid fa-rss"></i>
+            <p class="text-sm">feed</p>
+        </a>
+        <a 
+            href="{% url 'feed-search' %}" 
+            class="flex flex-col {% if url_name == 'feed-search' %} text-pink {% endif %}"
+        >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <p class="text-sm">Search</p>
+        </a>
+        <a class="flex flex-col">
+            <i class="fa-regular fa-square-plus"></i>
+            <p class="text-sm">Upload</p>
+        </a>
+        <a class="flex flex-col">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="text-sm">Inbox</p>
+        </a>
+        <a class="flex flex-col">
+            <i class="fa-regular fa-user"></i>
+            <p class="text-sm">Profile</p>
+        </a>
+        {% endwith %}
+    </div>
+</footer>

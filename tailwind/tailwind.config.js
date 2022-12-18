@@ -18,7 +18,8 @@ module.exports = {
       pink: "#FFC4DD",
       "dark-gray": "#222022",
       dark: "#131313",
-      blue: "#2C13DD"
+      blue: "#2C13DD",
+      violet: "#9C94C3",
     },
   },
   plugins: [],

@@ -32,7 +32,27 @@ html, body {
         @apply bg-white text-dark hover:text-white hover:bg-dark hover:border;
     }
 
+    .btn-blue {
+        @apply bg-blue text-pink hover:bg-pink hover:text-blue;
+    }
+
     .btn-outline-light {
         @apply border border-white/80 text-white/80 hover:bg-white hover:text-dark;
     }
+
+    /* vertical shadow */
+    .vertical-shadow-gradient {
+        @apply relative;
+    }
+    
+    .vertical-shadow-gradient::before {
+        content: "";
+        background-image: linear-gradient(180deg, transparent, var(--dark));
+        @apply absolute left-0 bottom-0 z-[10] h-[50%] w-full;
+    }
+    
+    .vertical-shadow-gradient:hover img {
+        @apply scale-110;
+    }
+    
 }
