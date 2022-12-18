@@ -5,12 +5,34 @@
 
 :root {
     --dark-gray: #1C1A1B;
+    --dark: #131313;
     --pink: #FFC4DD;
     --blue: #2C13DD;
 }
 
+* {
+    transition: 0.2s;
+}
 
 html, body {
-    background: black;
+    background: var(--dark);
     color: white;
+}
+
+@layer components {
+    .container {
+        @apply max-w-[1200px] mx-auto px-4;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-2 cursor-pointer min-w-[150px];
+    }
+
+    .btn-light {
+        @apply bg-white text-dark hover:text-white hover:bg-dark hover:border;
+    }
+
+    .btn-outline-light {
+        @apply border border-white/80 text-white/80 hover:bg-white hover:text-dark;
+    }
 }
