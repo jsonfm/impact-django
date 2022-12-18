@@ -8,7 +8,10 @@ class Profile(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now= True)
     blocked_user = models.ManyToManyField('self',blank=True, related_name='blocked_users', symmetrical=False)
-    following = models.ManyToManyField('self', symmetrical=False, related_name='followers', blank=True, null=True)
+    following = models.ManyToManyField('self', symmetrical=False, related_name='followers', blank=True)
+
+    def __str__(self):
+        return f"{self.user.username}"
 
 
 class Post(models.Model):
@@ -26,4 +29,4 @@ class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='author')
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now= True)
+    updated_at = models.DateTimeField(auto_now=True)

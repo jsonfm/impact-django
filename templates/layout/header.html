@@ -4,6 +4,7 @@
             <p class="font-bold text-pink">#</p>
             <b class="">Impact</b>
            </a>
+           {% if not user.is_authenticated %}
            <div class="flex gap-2">
                 <a href="{% url 'signup' %}" class="btn btn-outline-light  rounded-full">
                     Sign up
@@ -12,5 +13,17 @@
                     Log in
                 </a>
            </div>
+           {% else %}
+            <div class="flex gap-4 items-center">
+                <div class="w-12 h-12 rounded-full bg-dark-gray">
+                    <img
+                        src="{{user.profile.image.url}}"
+                    >
+                </div>
+                <p>
+                    {{ user.username }}
+                </p>
+            </div>
+           {% endif %}
     </navbar>
 </header>
