@@ -32,12 +32,20 @@ html, body {
         @apply rounded-full min-w-[auto] px-0 py-0;
     }
 
+    .btn-reset {
+        @apply min-w-[auto] px-0 py-0;
+    }
+
     .btn-light {
         @apply bg-white text-dark hover:text-white hover:bg-dark hover:border;
     }
 
     .btn-blue {
         @apply bg-blue text-pink hover:bg-pink hover:text-blue;
+    }
+
+    .btn-pink {
+        @apply bg-pink text-dark hover:bg-white hover:text-pink;
     }
 
     .btn-outline-light {
@@ -57,6 +65,26 @@ html, body {
     
     .vertical-shadow-gradient:hover img {
         @apply scale-110;
+    }
+
+    .dropdown {
+        @apply relative cursor-pointer;
+    }
+
+    .dropdown-menu {
+        @apply invisible hidden absolute ease-in duration-[200ms] -right-[10%];
+    }
+
+    .dropdown-menu-li {
+        @apply invisible;
+    }
+
+    .dropdown:hover .dropdown-menu{
+        @apply visible  right-[130%];
+    }
+
+    .dropdown:hover .dropdown-menu .dropdown-menu-li {
+        @apply visible;
     }
     
 }

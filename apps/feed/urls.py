@@ -1,5 +1,10 @@
 from django.urls import path
-from apps.feed.views import FeedView, SearchFeedView
+from apps.feed.views import (
+    FeedView, 
+    SearchFeedView, 
+    PostEditView,
+    PostCreateView
+)
 
 
 urlpatterns = [
@@ -12,5 +17,15 @@ urlpatterns = [
         route='search/',
         view=SearchFeedView.as_view(),
         name="feed-search"
+    ),
+    path(
+        route='post/edit/',
+        view=PostEditView.as_view(),
+        name="post-edit"
+    ),
+    path(
+        route='post/create/',
+        view=PostCreateView.as_view(),
+        name="post-create"
     ),
 ]

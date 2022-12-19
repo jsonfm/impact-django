@@ -11,3 +11,11 @@ class FeedView(ListView):
 
 class SearchFeedView(TemplateView):
     template_name = 'feed/search.html'
+
+
+class PostEditView(TemplateView):
+    template_name = 'feed/postedit.html'
+
+
+class PostCreateView(TemplateView):
+    template_name = 'feed/postcreate.html'
