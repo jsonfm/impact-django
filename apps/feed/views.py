@@ -1,8 +1,12 @@
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
+from apps.feed.models import Post
 
 
-class FeedView(TemplateView):
+class FeedView(ListView):
     template_name = 'feed/index.html'
+    model = Post
+    paginate_by = 10
+    context_object_name = "posts"
 
 
 class SearchFeedView(TemplateView):

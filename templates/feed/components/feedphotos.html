@@ -8,6 +8,10 @@
         </div>
     </div>
     <div class="md:px-8 py-8">
-        {% include "feed/components/photocard.html" %}
+        {% if posts %}
+            {% for post in posts %}
+            {% include "feed/components/photocard.html" %}
+            {% endfor %}
+        {% endif %}
     </div>
 </div>
