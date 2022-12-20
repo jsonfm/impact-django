@@ -2,6 +2,10 @@
     src="./docs/images/impact.jpeg"
 />
 
+<img
+    src="./docs/images/impactmobile.png"
+/>
+
 
 ## Impact
 A social network app made with Django. Inspired by [Behance](https://www.behance.net/gallery/139934827/Humanified-Simplifying-digital-activism?tracking_source=search_projects%7Csocial+network+design).

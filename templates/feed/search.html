@@ -14,8 +14,8 @@
     </div>
 </section>
 <section class="relative min-h-screen -mt-6 bg-dark-gray z-10 rounded-t-2xl">
-    <div class="container">
-        <div class="flex py-8 px-4 gap-4 w-full overflow-x-auto">
+    <div class="container min-screen">
+        <div class="flex py-8 px-4 gap-4 w-full overflow-x-auto md:justify-center">
             <div class="flex flex-col gap-2 items-center">
                 <div class="rounded-2xl w-20 h-20 grid place-items-center text-3xl bg-[#373737] hover:bg-pink hover:text-blue">
                     <i class="fa-solid fa-bolt"></i>
@@ -28,8 +28,32 @@
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
                 <p>Near</p>
-                <!-- <div class="w-2 h-2 rounded-full bg-pink"></div> -->
             </div>
+            <div class="flex flex-col gap-2 items-center">
+                <div class="rounded-2xl w-20 h-20 grid place-items-center text-3xl bg-[#373737] hover:bg-pink hover:text-blue">
+                    <i class="fa-brands fa-pagelines"></i>
+                </div>
+                <p>Enviroment</p>
+            </div>
+            <div class="flex flex-col gap-2 items-center">
+                <div class="rounded-2xl w-20 h-20 grid place-items-center text-3xl bg-[#373737] hover:bg-pink hover:text-blue">
+                    <i class="fa-solid fa-equals"></i>
+                </div>
+                <p>Equality</p>
+            </div>
+        </div>
+        <div class="flex items-center justify-between px-4">
+            <h4 class="text-pink my-6">
+                Movements
+            </h4>
+            <a>
+                100k results <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+        <div class="flex items-center py-12 gap-6 overflow-x-scroll overscroll-x-auto overflow-y-hidden w-full h-80 md:justify-center">
+            {% include "feed/components/storycard.html" %}
+            {% include "feed/components/storycard.html" %}
+            {% include "feed/components/storycard.html" %}
         </div>
     </div>
 </section>
