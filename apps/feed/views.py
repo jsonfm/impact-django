@@ -19,3 +19,7 @@ class PostEditView(TemplateView):
 
 class PostCreateView(TemplateView):
     template_name = 'feed/postcreate.html'
+
+
+class StoryDetailView(TemplateView):
+    template_name = 'feed/storydetail.html'

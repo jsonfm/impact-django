@@ -3,7 +3,7 @@
         <a href="{% url 'feed' %}" class="flex items-center gap-2 text-xl">
             <p class="font-bold text-pink">#</p>
             <b class="">Impact</b>
-           </a>
+        </a>
            {% if not user.is_authenticated %}
            <div class="flex gap-2">
                 <a href="{% url 'signup' %}" class="btn btn-outline-light  rounded-full">
@@ -14,7 +14,10 @@
                 </a>
            </div>
            {% else %}
-            <div class="flex gap-4 items-center">
+            <div class="flex gap-4 items-center py-12">
+                <a href="{% url 'chat-index' %}" class="w-10 h-10 rounded-full flex items-center justify-center bg-[#252525] text-pink hover:bg-pink hover:text-dark">
+                    <i class="fa-regular fa-message"></i>
+                </a>
                 <div class="w-12 h-12 rounded-full bg-dark-gray">
                     <img
                         src="{{user.profile.image.url}}"

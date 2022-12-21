@@ -3,7 +3,8 @@ from apps.feed.views import (
     FeedView, 
     SearchFeedView, 
     PostEditView,
-    PostCreateView
+    PostCreateView,
+    StoryDetailView
 )
 
 
@@ -27,5 +28,10 @@ urlpatterns = [
         route='post/create/',
         view=PostCreateView.as_view(),
         name="post-create"
+    ),
+    path(
+        route='story/detail/',
+        view=StoryDetailView.as_view(),
+        name="story-detail"
     ),
 ]
