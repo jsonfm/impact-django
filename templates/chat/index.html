@@ -4,9 +4,18 @@
 {% block content %}
 <section>
     <div class="container py-12">
-        Chat
+        <div>
+            <div class="flex gap-2 items-center bg-white/30 px-4 py-2 rounded-full w-full max-w-[330px] mx-auto">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    class="bg-transparent outline-none"
+                    placeholder="Search"
+                >
+            </div>
+        </div>
+        <div class="flex items-center py-12">
+            {% include "chat/components/usercard.html" %}
+        </div>
     </div>
 </section>
 {% endblock %}
-
-{% block footer %}{% endblock %}

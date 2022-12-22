@@ -6,7 +6,7 @@ class LoginView(TemplateView):
     template_name = 'auth/login.html'
     redirect_field_name = 'feed'
 
-
+    
 class SignupView(TemplateView):
     template_name = 'auth/signup.html'
     redirect_field_name = 'feed'

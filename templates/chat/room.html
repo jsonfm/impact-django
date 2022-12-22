@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<section>
+    <div class="container py-8">
+        <div class="flex">
+            <a href="{% url 'chat-index' %}">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <div class="flex px-6 gap-4">
+                <div class="w-8 h-8 overflow-hidden rounded-full">
+                    <img
+                    src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                    class="w-full h-full object-cover"
+                    >
+                </div>
+                <p>
+                    Alej Savik
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %} 
+<section class="fixed bottom-0 py-5 w-full">
+    <div class="container">
+        <div class="flex justify-between h-12 w-full">
+            <textarea class="w-full bg-transparent border border-pink/20 outline-none px-4 py-2 rounded-xl"></textarea>
+            <button class="btn btn-light btn-reset w-12">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
