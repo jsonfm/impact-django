@@ -1,5 +1,6 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, CreateView
 from apps.feed.models import Post
+from apps.feed.forms import PostForm
 
 
 class FeedView(ListView):
@@ -17,8 +18,9 @@ class PostEditView(TemplateView):
     template_name = 'feed/postedit.html'
 
 
-class PostCreateView(TemplateView):
+class PostCreateView(CreateView):
     template_name = 'feed/postcreate.html'
+    form_class = PostForm
 
 
 class StoryDetailView(TemplateView):

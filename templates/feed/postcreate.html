@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <section>
     <div class="container py-12">
@@ -7,10 +7,21 @@
         <form
             class="w-full max-w-[600px] mx-auto flex flex-col"
         >
+            {% csrf_token %}
+            <div class="relative w-full min-h-[300px] h-56 overflow-hidden bg-dark-gray mb-6">
+                <label for="imageInput" class="absolute bg-dark-gray/20 btn btn-reset w-16 h-16 rounded-full z-20">
+                    <i class="fa-solid fa-image"></i>
+                </label>
+                <input class="hidden" name="imageInput" id="imageInput" type="file" class="absolute">
+                <img
+                    class="w-full h-full object-cover"
+                    id="image"
+                >
+            </div>
             <textarea 
                 id="" 
                 placeholder="What are you thinking? ..."
-                class="w-full h-36 px-4 py-2 bg-transparent rounded-md outline-none border border-pink/10"
+                class="w-full h-20 px-4 py-2 bg-transparent rounded-md outline-none border border-pink/10"
             ></textarea>
             <button class="btn btn-pink mt-6 rounded-full mx-auto font-bold">
                 Save
@@ -18,4 +29,8 @@
         </form>
     </div>
 </section>
+{% endblock %}
+
+{% block scripts %} 
+    <script src="{% static 'js/feed/postcreate.js' %}"></script>
 {% endblock %}
